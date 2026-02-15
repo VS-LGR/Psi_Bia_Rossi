@@ -97,7 +97,7 @@ export default function Testimonials() {
                           </div>
                         )}
                         <p className="text-lg text-gray-700 italic mb-6">
-                          "{testimonial.text}"
+                          &ldquo;{testimonial.text}&rdquo;
                         </p>
                         <p className="text-base font-semibold text-primary">
                           {testimonial.name}
@@ -186,7 +186,7 @@ export default function Testimonials() {
                 </div>
               )}
               <p className="text-base text-gray-700 italic mb-4">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </p>
               <p className="text-sm font-semibold text-primary">
                 {testimonial.name}
