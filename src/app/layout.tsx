@@ -3,9 +3,9 @@ import './globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.beatrizfavinchirossi.com.br'),
-  title: 'Beatriz Favinchi Rossi | Psicóloga em Votorantim - Psicanálise para adolescentes 14+ e adultos',
+  title: 'Beatriz Favinchi Rossi | Psicóloga em Votorantim - Psicanálise para maiores de 14 anos e adultos',
   description:
-    'Atendimento psicológico em Votorantim com foco em psicanálise para adolescentes 14+ e adultos. Primeira consulta gratuita mediante CPF e confirmação de horário via WhatsApp.',
+    'Atendimento psicológico em Votorantim com foco em psicanálise para maiores de 14 anos e adultos. Primeira consulta gratuita mediante CPF e confirmação de horário via WhatsApp.',
   keywords: [
     'psicologa em votorantim',
     'psicanalise votorantim',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      'Beatriz Favinchi Rossi | Psicóloga em Votorantim - Psicanálise para adolescentes 14+ e adultos',
+      'Beatriz Favinchi Rossi | Psicóloga em Votorantim - Psicanálise para maiores de 14 anos e adultos',
     description:
       'Atendimento psicológico acolhedor em psicanálise. Primeira consulta gratuita mediante CPF e confirmação de horário no WhatsApp.',
     url: '/',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title:
       'Beatriz Favinchi Rossi | Psicóloga em Votorantim',
     description:
-      'Psicanálise para adolescentes 14+ e adultos com abordagem acolhedora e progressiva.',
+      'Psicanálise para maiores de 14 anos e adultos com abordagem acolhedora e progressiva.',
   },
 }
 

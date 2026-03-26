@@ -13,8 +13,9 @@ export default function Contact() {
   return (
     <section
       id="contato"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-secondary/25 to-white relative overflow-hidden"
     >
+      <div className="absolute inset-0 pattern-grid opacity-10"></div>
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -133,13 +134,13 @@ export default function Contact() {
 
             <Card className="bg-gradient-to-br from-primary/5 to-primary-light/5">
               <h4 className="font-bold text-gray-900 mb-2">
-                Condições da 1a consulta gratuita
+                Condições da 1ª consulta gratuita
               </h4>
               <p className="text-gray-600 mb-4">
                 Validação de CPF e confirmação de disponibilidade pelo WhatsApp.
               </p>
               <p className="text-gray-600">
-                Atendimentos para adolescentes 14+ e adultos.
+                Atendimentos para maiores de 14 anos e adultos.
               </p>
             </Card>
           </div>

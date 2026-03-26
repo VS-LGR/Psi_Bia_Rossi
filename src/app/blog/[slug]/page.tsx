@@ -81,7 +81,8 @@ export default async function BlogPostPage({
   const dateLabel = new Date(post.published_at).toLocaleDateString('pt-BR')
 
   return (
-    <main className="min-h-screen bg-white pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-gradient-to-b from-white to-secondary/35 pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div className="absolute inset-0 pattern-dots opacity-15"></div>
       <article className="container mx-auto max-w-3xl">
         <a href="/#blog" className="text-primary font-semibold hover:underline">
           ← Voltar ao Blog
@@ -107,12 +108,12 @@ export default async function BlogPostPage({
           )}
         </div>
 
-        <div className="mt-12 rounded-2xl bg-secondary p-6">
+        <div className="mt-12 rounded-2xl bg-white/90 backdrop-blur-sm ring-1 ring-primary/10 shadow-lg shadow-primary/10 p-6">
           <h2 className="text-xl font-bold text-gray-900 mb-2">
             Quer conversar sobre este tema?
           </h2>
           <p className="text-gray-700 mb-4">
-            Agende sua 1a consulta gratuita via WhatsApp (mediante CPF e confirmação de horário).
+            Agende sua 1ª consulta gratuita via WhatsApp (mediante CPF e confirmação de horário).
           </p>
           <a
             className="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"

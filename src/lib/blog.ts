@@ -12,7 +12,7 @@ const fallbackPosts: BlogPost[] = [
   },
   {
     id: 'fallback-2',
-    title: 'Adolescência 14+: quando buscar acompanhamento psicológico',
+    title: 'Adolescência: quando buscar acompanhamento psicológico (maiores de 14 anos)',
     slug: 'adolescencia-quando-buscar-acompanhamento',
     excerpt:
       'Sinais importantes para famílias e adolescentes identificarem o momento de iniciar atendimento psicológico.',

@@ -51,8 +51,9 @@ export default function Testimonials() {
   return (
     <section
       id="depoimentos"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-secondary/30 to-white"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-secondary/35 relative overflow-hidden"
     >
+      <div className="absolute inset-0 pattern-dots opacity-15"></div>
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -66,7 +67,7 @@ export default function Testimonials() {
 
         {/* Desktop Carousel */}
         <div className="hidden md:block">
-          <div className="relative">
+          <div className="relative z-10">
             <div className="overflow-hidden">
               <div
                 className="flex transition-transform duration-500 ease-in-out"
@@ -111,7 +112,7 @@ export default function Testimonials() {
             {/* Navigation Buttons */}
             <button
               onClick={prevTestimonial}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg shadow-primary/10 ring-1 ring-primary/10 hover:bg-white transition-colors"
               aria-label="Depoimento anterior"
             >
               <svg
@@ -130,7 +131,7 @@ export default function Testimonials() {
             </button>
             <button
               onClick={nextTestimonial}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg shadow-primary/10 ring-1 ring-primary/10 hover:bg-white transition-colors"
               aria-label="Próximo depoimento"
             >
               <svg

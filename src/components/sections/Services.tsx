@@ -22,7 +22,7 @@ export default function Services() {
     },
     {
       id: '3',
-      title: 'Atendimento Psicológico para Adolescentes 14+',
+      title: 'Atendimento Psicológico para maiores de 14 anos',
       description:
         'Acompanhamento focado em ansiedade, autoestima, conflitos familiares e desafios emocionais da adolescência.',
     },
@@ -87,7 +87,7 @@ export default function Services() {
           <div className="w-24 h-1 bg-primary mx-auto rounded mb-4"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Serviços alinhados a psicanálise clínica e metodologias inovadoras,
-            com foco em adolescentes 14+ e adultos.
+            com foco em maiores de 14 anos e adultos.
           </p>
         </div>
 

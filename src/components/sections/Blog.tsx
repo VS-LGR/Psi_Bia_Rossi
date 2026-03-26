@@ -7,8 +7,9 @@ export default async function Blog() {
   return (
     <section
       id="blog"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-secondary/20"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-secondary/35 relative overflow-hidden"
     >
+      <div className="absolute inset-0 pattern-dots opacity-15"></div>
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">

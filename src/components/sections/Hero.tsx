@@ -25,21 +25,22 @@ export default function Hero() {
       <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="text-center lg:text-left space-y-6 animate-slide-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-4">
+          <div className="text-center lg:text-left space-y-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-4 animate-breeze-in">
               <GameIcon type="board" className="w-5 h-5" />
-              <span>Psicanálise para adolescentes 14+ e adultos</span>
+              <span>Psicanálise para maiores de 14 anos e adultos</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Seu processo de cuidado emocional começa com{' '}
-              <span className="text-primary relative inline-block">
-                acolhimento real
-                <span className="absolute -bottom-2 left-0 right-0 h-3 bg-primary-light/30 -z-10 transform -skew-x-12"></span>
+              <span className="block animate-breeze-title">
+                Cuidar da saúde mental pode ser leve.
+              </span>
+              <span className="block mt-3 text-primary animate-breeze-title" style={{ animationDelay: '120ms' }}>
+                No seu tempo. No seu ritmo.
               </span>
             </h1>
-            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-              Atendimento em psicanálise com escuta ativa, transparência de
-              emoções e evolução gradual, respeitando o seu ritmo sem pressão.
+            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-breeze-in" style={{ animationDelay: '220ms' }}>
+              Um espaço acolhedor, com escuta ativa e condução gradual, para você
+              construir clareza emocional sem pressão.
             </p>
             <p className="text-base text-gray-600">
               Com <span className="font-semibold text-primary">Beatriz Favinchi Rossi</span> - CRP SP 179388.
@@ -57,12 +58,12 @@ export default function Hero() {
                   size="lg"
                   className="w-full sm:w-auto transform hover:scale-105 transition-transform animate-pulse-glow"
                 >
-                  Quero minha 1a consulta gratuita
+                  Agende sua 1° consulta
                 </Button>
               </a>
               <Button
                 onClick={() => {
-                  const element = document.getElementById('sobre')
+                  const element = document.getElementById('servicos')
                   if (element) {
                     element.scrollIntoView({ behavior: 'smooth', block: 'start' })
                   }
@@ -71,7 +72,7 @@ export default function Hero() {
                 size="lg"
                 className="w-full sm:w-auto"
               >
-                Saiba Mais
+                Ver atendimentos disponíveis
               </Button>
             </div>
           </div>

@@ -20,9 +20,10 @@ export default function About() {
   return (
     <section
       id="sobre"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-secondary/35 relative overflow-hidden"
     >
       {/* Elementos decorativos */}
+      <div className="absolute inset-0 pattern-dots opacity-15"></div>
       <div className="absolute top-10 right-20 w-20 h-20 text-primary/5 animate-rotate-slow hidden lg:block">
         <GameIcon type="board" className="w-full h-full" />
       </div>

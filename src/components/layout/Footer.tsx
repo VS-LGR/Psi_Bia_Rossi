@@ -21,7 +21,7 @@ export default function Footer() {
               Beatriz Favinchi Rossi
             </h3>
             <p className="text-gray-400">
-              Psicóloga com atuação em psicanálise para adolescentes 14+ e
+              Psicóloga com atuação em psicanálise para maiores de 14 anos e
               adultos, com recursos inovadores aplicados conforme cada caso.
             </p>
           </div>

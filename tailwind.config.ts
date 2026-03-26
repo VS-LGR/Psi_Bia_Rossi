@@ -10,18 +10,18 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          // Azul bebê mais suave (CTA/links)
-          DEFAULT: '#5B9DFF',
-          light: '#CFE5FF',
+          // Azul bebê com mais contraste (CTA/links)
+          DEFAULT: '#2F7BFF',
+          light: '#BFD9FF',
         },
         secondary: {
-          // Fundos acolhedores (azul gelo com toque quente)
-          DEFAULT: '#F3F8FF',
-          dark: '#244A7A',
+          // Fundos acolhedores + profundidade
+          DEFAULT: '#EEF6FF',
+          dark: '#163B6B',
         },
         accent: {
-          // Acentos delicados (chips, detalhes, hovers)
-          DEFAULT: '#8ABEFF',
+          // Acentos mais “bold” sem perder suavidade
+          DEFAULT: '#7AB6FF',
         },
       },
     },

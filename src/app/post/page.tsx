@@ -167,7 +167,8 @@ export default function BlogPostAdminPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-gradient-to-b from-white to-secondary/35 pt-24 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div className="absolute inset-0 pattern-grid opacity-10"></div>
       <div className="container mx-auto max-w-3xl">
         <div className="mb-8 text-center">
           <h1 className="text-3xl font-bold text-primary mb-2">Área Profissional</h1>
@@ -177,7 +178,7 @@ export default function BlogPostAdminPage() {
         </div>
 
         {!accessToken ? (
-          <form onSubmit={handleAuth} className="bg-[#F0F7FF] rounded-2xl p-6 shadow-lg">
+          <form onSubmit={handleAuth} className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg shadow-primary/10 ring-1 ring-primary/10">
             <div className="flex items-center justify-center gap-3 mb-6">
               <button
                 type="button"
@@ -260,7 +261,7 @@ export default function BlogPostAdminPage() {
             </div>
           </form>
         ) : (
-          <form onSubmit={handleCreatePost} className="bg-[#F0F7FF] rounded-2xl p-6 shadow-lg">
+          <form onSubmit={handleCreatePost} className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg shadow-primary/10 ring-1 ring-primary/10">
             <div className="flex items-center justify-between mb-6">
               <div>
                 <h2 className="text-xl font-bold text-gray-900">Criar post</h2>
