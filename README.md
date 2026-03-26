@@ -1,6 +1,6 @@
 # Landing Page - Beatriz Favinchi Rossi
 
-Landing Page moderna e responsiva para Beatriz Favinchi Rossi, psicóloga especializada em psicanálise com gamificação através de jogos de tabuleiro.
+Landing Page moderna e responsiva para Beatriz Favinchi Rossi, psicóloga com atuação em psicanálise e recursos lúdicos com jogos de tabuleiro.
 
 ## 🎯 Objetivo
 
@@ -169,6 +169,25 @@ create index if not exists blog_posts_status_published_at_idx
 ### 4) Checklist de deploy Vercel
 
 - Configurar variáveis `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- Configurar `SUPABASE_SERVICE_ROLE_KEY` (necessário para publicar posts via rota `/post`)
 - Confirmar build: `npm run build`
 - Publicar branch atual
+
+## 🕵️ Área Profissional para Blog (rota oculta `/post`)
+
+Para que a profissional crie posts sem acessar o Supabase Dashboard:
+
+1. Abra a rota `/post` no site.
+2. Faça login (ou crie a conta) usando e-mail e senha do Supabase.
+3. No formulário, preencha `título`, `slug`, `resumo` e selecione o `status` (Draft ou Publicado).
+4. Ao publicar, a seção `/Blog` já exibirá os cards dos posts com `status = published`.
+
+### Variáveis adicionais (no Vercel/local)
+
+- `SUPABASE_SERVICE_ROLE_KEY`: chave de Service Role para permitir inserção server-side.
+- `BLOG_ADMIN_EMAIL` (recomendado): se definido, somente este e-mail poderá publicar. Se não estiver definido, qualquer usuário autenticado poderá publicar.
+
+### Observação
+
+- Se no Supabase estiver ativa confirmação de e-mail para sign-up, pode ser necessário confirmar antes de conseguir fazer login.
 
