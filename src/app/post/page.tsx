@@ -387,8 +387,3 @@ export default function BlogPostAdminPage() {
   )
 }
 
-export const robots = {
-  index: false,
-  follow: false,
-}
-
