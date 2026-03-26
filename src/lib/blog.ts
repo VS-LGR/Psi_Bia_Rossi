@@ -59,3 +59,33 @@ export async function getPublishedBlogPosts(): Promise<BlogPost[]> {
     return fallbackPosts
   }
 }
+
+export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+  if (!supabaseUrl || !supabaseAnonKey) {
+    return null
+  }
+
+  try {
+    const endpoint = `${supabaseUrl}/rest/v1/blog_posts?select=id,title,slug,excerpt,content,published_at,status&slug=eq.${encodeURIComponent(
+      slug
+    )}&status=eq.published&limit=1`
+
+    const response = await fetch(endpoint, {
+      headers: {
+        apikey: supabaseAnonKey,
+        Authorization: `Bearer ${supabaseAnonKey}`,
+      },
+      cache: 'no-store',
+    })
+
+    if (!response.ok) return null
+
+    const data = (await response.json()) as BlogPost[]
+    return data[0] ?? null
+  } catch {
+    return null
+  }
+}

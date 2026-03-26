@@ -153,12 +153,20 @@ create table if not exists public.blog_posts (
   title text not null,
   slug text not null unique,
   excerpt text not null,
+  content text not null,
   published_at timestamptz not null default now(),
   status text not null check (status in ('draft', 'published')) default 'draft'
 );
 
 create index if not exists blog_posts_status_published_at_idx
   on public.blog_posts (status, published_at desc);
+```
+
+Se você já criou a tabela antes (sem a coluna `content`), rode:
+
+```sql
+alter table public.blog_posts
+add column if not exists content text not null default '';
 ```
 
 ### 3) Publicação de conteúdo
@@ -170,16 +178,17 @@ create index if not exists blog_posts_status_published_at_idx
 
 - Configurar variáveis `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 - Configurar `SUPABASE_SERVICE_ROLE_KEY` (necessário para publicar posts via rota `/post`)
-- Confirmar build: `npm run build`
+![1774561048605](image/README/1774561048605.png)- Confirmar build: `npm run build`
 - Publicar branch atual
 
 ## 🕵️ Área Profissional para Blog (rota oculta `/post`)
-
+![1774561073176](image/README/1774561073176.png)![1774561243185](image/README/1774561243185.png)
 Para que a profissional crie posts sem acessar o Supabase Dashboard:
 
 1. Abra a rota `/post` no site.
 2. Faça login (ou crie a conta) usando e-mail e senha do Supabase.
 3. No formulário, preencha `título`, `slug`, `resumo` e selecione o `status` (Draft ou Publicado).
+   - O campo `conteúdo completo (Markdown)` é obrigatório para a página `/blog/[slug]`.
 4. Ao publicar, a seção `/Blog` já exibirá os cards dos posts com `status = published`.
 
 ### Variáveis adicionais (no Vercel/local)

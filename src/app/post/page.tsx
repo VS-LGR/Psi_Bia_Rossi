@@ -29,6 +29,7 @@ export default function BlogPostAdminPage() {
   const [slug, setSlug] = useState('')
   const [slugManuallyEdited, setSlugManuallyEdited] = useState(false)
   const [excerpt, setExcerpt] = useState('')
+  const [content, setContent] = useState('')
   const [status, setStatus] = useState<PostStatus>('published')
   const [publishedAt, setPublishedAt] = useState(() => {
     const d = new Date()
@@ -41,8 +42,13 @@ export default function BlogPostAdminPage() {
 
   const canSave = useMemo(() => {
     if (!accessToken) return false
-    return title.trim().length > 0 && slug.trim().length > 0 && excerpt.trim().length > 0
-  }, [accessToken, title, slug, excerpt])
+    return (
+      title.trim().length > 0 &&
+      slug.trim().length > 0 &&
+      excerpt.trim().length > 0 &&
+      content.trim().length > 0
+    )
+  }, [accessToken, title, slug, excerpt, content])
 
   const handleAuth = async (e: FormEvent) => {
     e.preventDefault()
@@ -135,6 +141,7 @@ export default function BlogPostAdminPage() {
           title: title.trim(),
           slug: slugify(slug.trim()),
           excerpt: excerpt.trim(),
+          content: content.trim(),
           status,
           published_at: new Date(publishedAt).toISOString(),
         }),
@@ -150,6 +157,7 @@ export default function BlogPostAdminPage() {
       setSlug('')
       setSlugManuallyEdited(false)
       setExcerpt('')
+      setContent('')
       setStatus('published')
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Erro inesperado.')
@@ -325,6 +333,21 @@ export default function BlogPostAdminPage() {
                   onChange={(e) => setExcerpt(e.target.value)}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
                   placeholder="Resumo do artigo para aparecer no card do Blog."
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="content">
+                  Conteúdo completo (Markdown)
+                </label>
+                <textarea
+                  id="content"
+                  required
+                  rows={10}
+                  value={content}
+                  onChange={(e) => setContent(e.target.value)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                  placeholder="Escreva o texto completo aqui. Use Markdown simples (títulos, listas, negrito)."
                 />
               </div>
 

@@ -64,6 +64,7 @@ export async function POST(req: Request) {
       title: string
       slug: string
       excerpt: string
+      content: string
       published_at: string
       status: PostStatus
     }>
@@ -71,12 +72,13 @@ export async function POST(req: Request) {
     const title = (payload.title || '').trim()
     const slug = (payload.slug || '').trim()
     const excerpt = (payload.excerpt || '').trim()
+    const content = (payload.content || '').trim()
     const publishedAt = (payload.published_at || '').trim()
     const status = (payload.status || 'draft') as PostStatus
 
-    if (!title || !slug || !excerpt) {
+    if (!title || !slug || !excerpt || !content) {
       return NextResponse.json(
-        { error: 'title, slug and excerpt are required.' },
+        { error: 'title, slug, excerpt and content are required.' },
         { status: 400 }
       )
     }
@@ -90,6 +92,7 @@ export async function POST(req: Request) {
       title,
       slug,
       excerpt,
+      content,
       published_at: publishedAt || new Date().toISOString(),
       status,
     }

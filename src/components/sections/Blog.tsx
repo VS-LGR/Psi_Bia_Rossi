@@ -30,10 +30,10 @@ export default async function Blog() {
               <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}</h3>
               <p className="text-gray-600 leading-relaxed mb-5">{post.excerpt}</p>
               <a
-                href="#contato"
+                href={`/blog/${post.slug}`}
                 className="mt-auto inline-flex items-center text-primary font-semibold hover:underline"
               >
-                Conversar sobre este tema
+                Ler o post completo
               </a>
             </Card>
           ))}
