@@ -9,109 +9,94 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center pt-20 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary via-white to-primary-light/10 relative overflow-hidden pattern-dots"
+      className="min-h-screen flex items-center justify-center pt-24 pb-14 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-secondary/40 relative overflow-hidden"
     >
-      {/* Elementos decorativos flutuantes */}
-      <div className="absolute top-20 left-10 w-16 h-16 text-primary/20 animate-float hidden lg:block">
+      {/* Fundo/texture consistente */}
+      <div className="absolute inset-0 pattern-dots opacity-18"></div>
+      <div className="absolute inset-0 pattern-grid opacity-8"></div>
+
+      {/* Elementos decorativos flutuantes (discretos) */}
+      <div className="absolute top-24 left-8 w-14 h-14 text-primary/15 animate-float hidden lg:block">
         <GameIcon type="dice" className="w-full h-full" />
       </div>
-      <div className="absolute top-40 right-20 w-12 h-12 text-primary-light/30 animate-float" style={{ animationDelay: '2s' }}>
+      <div
+        className="absolute top-28 right-10 w-12 h-12 text-accent/15 animate-float hidden lg:block"
+        style={{ animationDelay: '2s' }}
+      >
         <GameIcon type="piece" className="w-full h-full" />
       </div>
-      <div className="absolute bottom-32 left-1/4 w-14 h-14 text-accent/20 animate-float" style={{ animationDelay: '4s' }}>
+      <div
+        className="absolute bottom-16 left-16 w-12 h-12 text-primary-light/18 animate-float hidden lg:block"
+        style={{ animationDelay: '4s' }}
+      >
         <GameIcon type="card" className="w-full h-full" />
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="text-center lg:text-left space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-4 animate-breeze-in">
-              <GameIcon type="board" className="w-5 h-5" />
-              <span>Psicanálise para maiores de 14 anos e adultos</span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              <span className="block animate-breeze-title">
-                Cuidar da saúde mental pode ser leve.
-              </span>
-              <span className="block mt-3 text-primary animate-breeze-title" style={{ animationDelay: '120ms' }}>
-                No seu tempo. No seu ritmo.
-              </span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed animate-breeze-in" style={{ animationDelay: '220ms' }}>
-              Um espaço acolhedor, com escuta ativa e condução gradual, para você
-              construir clareza emocional sem pressão.
-            </p>
-            <p className="text-base text-gray-600">
-              Com <span className="font-semibold text-primary">Beatriz Favinchi Rossi</span> - CRP SP 179388.
-              Primeira consulta gratuita mediante CPF e confirmação de horário via WhatsApp.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto"
-              >
-                <Button
-                  variant="primary"
-                  size="lg"
-                  className="w-full sm:w-auto transform hover:scale-105 transition-transform animate-pulse-glow"
-                >
-                  Agende sua 1° consulta
-                </Button>
-              </a>
-              <Button
-                onClick={() => {
-                  const element = document.getElementById('servicos')
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                  }
-                }}
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto"
-              >
-                Ver atendimentos disponíveis
-              </Button>
-            </div>
+        {/* Content centralizado (sem imagem à direita) */}
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6 animate-breeze-in">
+            <GameIcon type="board" className="w-5 h-5" />
+            <span>Psicanálise para maiores de 14 anos e adultos</span>
           </div>
 
-          {/* Image Placeholder com elementos de jogo */}
-          <div className="relative">
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-primary-light/20 flex items-center justify-center overflow-hidden shadow-2xl relative">
-              {/* Tabuleiro de fundo decorativo */}
-              <div className="absolute inset-0 pattern-grid opacity-20"></div>
-              
-              {/* Elementos de jogo decorativos */}
-              <div className="absolute top-8 left-8 w-12 h-12 text-primary/40 animate-rotate-slow">
-                <GameIcon type="dice" className="w-full h-full" />
-              </div>
-              <div className="absolute bottom-8 right-8 w-10 h-10 text-primary-light/40 animate-float">
-                <GameIcon type="piece" className="w-full h-full" />
-              </div>
-              
-              <div className="text-center p-8 relative z-10">
-                <div className="w-48 h-48 mx-auto mb-4 relative">
-                  <svg
-                    className="w-full h-full text-primary/40"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1.5}
-                      d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
-                    />
-                  </svg>
-                </div>
-                <p className="text-primary/60 mt-4 text-sm font-medium">
-                  Psicanálise com abordagem acolhedora e inovadora
-                </p>
-              </div>
-            </div>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.05]">
+            <span className="block animate-breeze-title">
+              Cuidar da saúde mental
+            </span>
+            <span
+              className="block mt-3 text-primary animate-breeze-title"
+              style={{ animationDelay: '140ms' }}
+            >
+              pode ser leve.
+            </span>
+          </h1>
+
+          <p
+            className="mt-8 text-lg sm:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto animate-breeze-in"
+            style={{ animationDelay: '260ms' }}
+          >
+            Um espaço acolhedor, com escuta ativa e condução gradual, para você
+            construir clareza emocional sem pressão.
+          </p>
+
+          <p className="mt-6 text-base text-gray-600 max-w-2xl mx-auto">
+            Com{' '}
+            <span className="font-semibold text-primary">
+              Beatriz Favinchi Rossi
+            </span>{' '}
+            - CRP SP 179388. Primeira consulta gratuita mediante CPF e
+            confirmação de horário via WhatsApp.
+          </p>
+
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <Button
+                variant="primary"
+                size="lg"
+                className="w-full sm:w-auto transform hover:scale-105 transition-transform animate-pulse-glow"
+              >
+                Agende sua 1° consulta
+              </Button>
+            </a>
+            <Button
+              onClick={() => {
+                const element = document.getElementById('servicos')
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }
+              }}
+              variant="outline"
+              size="lg"
+              className="w-full sm:w-auto"
+            >
+              Ver atendimentos disponíveis
+            </Button>
           </div>
         </div>
       </div>

@@ -165,8 +165,7 @@ create index if not exists blog_posts_status_published_at_idx
 Se você já criou a tabela antes (sem a coluna `content`), rode:
 
 ```sql
-alter table public.blog_posts
-add column if not exists content text not null default '';
+![1774563088774](image/README/1774563088774.png)
 ```
 
 ### 3) Publicação de conteúdo
