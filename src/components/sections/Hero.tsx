@@ -3,6 +3,33 @@
 import Button from '../ui/Button'
 import GameIcon from '../ui/GameIcon'
 
+function BreezeText({
+  text,
+  className,
+  delayMs = 0,
+}: {
+  text: string
+  className?: string
+  delayMs?: number
+}) {
+  return (
+    <span className={className} aria-label={text}>
+      <span className="sr-only">{text}</span>
+      <span className="breeze-text" aria-hidden="true">
+        {Array.from(text).map((char, idx) => (
+          <span
+            key={`${char}-${idx}`}
+            className="breeze-letter"
+            style={{ animationDelay: `${delayMs + idx * 18}ms` }}
+          >
+            {char === ' ' ? '\u00A0' : char}
+          </span>
+        ))}
+      </span>
+    </span>
+  )
+}
+
 export default function Hero() {
   const whatsappLink = 'https://wa.me/5515991126506?text=Ol%C3%A1%2C%20quero%20agendar%20minha%201%C2%AA%20consulta%20gratuita.'
 
@@ -41,14 +68,11 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.05]">
-            <span className="block animate-breeze-title">
-              Cuidar da saúde mental
+            <span className="block">
+              <BreezeText text="Cuidar da saúde mental" />
             </span>
-            <span
-              className="block mt-3 text-primary animate-breeze-title"
-              style={{ animationDelay: '140ms' }}
-            >
-              pode ser leve.
+            <span className="block mt-3 text-primary">
+              <BreezeText text="pode ser leve." delayMs={180} />
             </span>
           </h1>
 
