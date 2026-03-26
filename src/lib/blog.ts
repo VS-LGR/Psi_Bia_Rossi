@@ -45,7 +45,8 @@ export async function getPublishedBlogPosts(): Promise<BlogPost[]> {
         apikey: supabaseAnonKey,
         Authorization: `Bearer ${supabaseAnonKey}`,
       },
-      next: { revalidate: 300 },
+      // Garante que o Blog reflita publicações recém-criadas imediatamente.
+      cache: 'no-store',
     })
 
     if (!response.ok) {
