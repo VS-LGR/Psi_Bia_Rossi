@@ -4,12 +4,7 @@ import Button from '../ui/Button'
 import GameIcon from '../ui/GameIcon'
 
 export default function Hero() {
-  const scrollToContact = () => {
-    const element = document.getElementById('contato')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }
+  const whatsappLink = 'https://wa.me/5515991126506?text=Ol%C3%A1%2C%20quero%20agendar%20minha%201%C2%AA%20consulta%20gratuita.'
 
   return (
     <section
@@ -33,33 +28,38 @@ export default function Hero() {
           <div className="text-center lg:text-left space-y-6 animate-slide-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-4">
               <GameIcon type="board" className="w-5 h-5" />
-              <span>Metodologia Inovadora</span>
+              <span>Psicanálise para adolescentes 14+ e adultos</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Psicanálise com{' '}
+              Seu processo de cuidado emocional começa com{' '}
               <span className="text-primary relative inline-block">
-                Gamificação
+                acolhimento real
                 <span className="absolute -bottom-2 left-0 right-0 h-3 bg-primary-light/30 -z-10 transform -skew-x-12"></span>
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-              Transforme sua jornada de autoconhecimento através de jogos de
-              tabuleiro. Uma abordagem inovadora e acolhedora para melhorar sua
-              saúde mental.
+              Atendimento em psicanálise com escuta ativa, transparência de
+              emoções e evolução gradual, respeitando o seu ritmo sem pressão.
             </p>
             <p className="text-base text-gray-600">
-              Com <span className="font-semibold text-primary">Beatriz Favinchi Rossi</span>, psicóloga especializada em psicanálise
-              com gamificação.
+              Com <span className="font-semibold text-primary">Beatriz Favinchi Rossi</span> - CRP SP 179388.
+              Primeira consulta gratuita mediante CPF e confirmação de horário via WhatsApp.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button
-                onClick={scrollToContact}
-                variant="primary"
-                size="lg"
-                className="w-full sm:w-auto transform hover:scale-105 transition-transform animate-pulse-glow"
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
               >
-                Agendar Consulta
-              </Button>
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="w-full sm:w-auto transform hover:scale-105 transition-transform animate-pulse-glow"
+                >
+                  Quero minha 1a consulta gratuita
+                </Button>
+              </a>
               <Button
                 onClick={() => {
                   const element = document.getElementById('sobre')
@@ -107,7 +107,7 @@ export default function Hero() {
                   </svg>
                 </div>
                 <p className="text-primary/60 mt-4 text-sm font-medium">
-                  Foto da profissional
+                  Psicanálise com abordagem acolhedora e inovadora
                 </p>
               </div>
             </div>

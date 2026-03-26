@@ -8,26 +8,26 @@ export default function Testimonials() {
   const testimonials: Testimonial[] = [
     {
       id: '1',
-      name: 'Maria Silva',
-      text: 'A abordagem com jogos de tabuleiro tornou a terapia muito mais acessível para mim. Consegui me expressar melhor e trabalhar questões que antes eram difíceis de abordar.',
+      name: 'Eliana',
+      text: 'Maravilhosa.. me senti acolhida, tudo oque eu precisava neste momento.',
       rating: 5,
     },
     {
       id: '2',
-      name: 'João Santos',
-      text: 'Beatriz é uma profissional excepcional. Sua metodologia inovadora me ajudou a desenvolver habilidades sociais e emocionais de forma natural e envolvente.',
+      name: 'Isabelle Vilela',
+      text: 'Uma psicóloga acolhedora e que transmite calma em todas as sessões, muito atenciosa e interessada em ajudar.',
       rating: 5,
     },
     {
       id: '3',
-      name: 'Ana Costa',
-      text: 'As sessões com gamificação foram transformadoras. O ambiente lúdico me permitiu trabalhar questões profundas de forma mais leve e acolhedora.',
+      name: 'E.F',
+      text: 'Dra. Beatriz é uma excelente profissional, muito dedicada e atenciosa.',
       rating: 5,
     },
     {
       id: '4',
-      name: 'Pedro Oliveira',
-      text: 'Recomendo muito! A combinação de psicanálise com jogos de tabuleiro é única e muito eficaz. Sinto que fiz progressos significativos.',
+      name: 'Luciana Rosa',
+      text: 'Excelente profissional. Tem me ajudado muito. Sou paciente há quase 2 anos.',
       rating: 5,
     },
   ]
@@ -60,8 +60,7 @@ export default function Testimonials() {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded mb-4"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Veja o que nossos pacientes têm a dizer sobre a experiência com
-            psicanálise e gamificação.
+            Trechos de avaliações públicas de pacientes sobre os atendimentos.
           </p>
         </div>
 
@@ -194,6 +193,18 @@ export default function Testimonials() {
             </Card>
           ))}
         </div>
+        <p className="text-sm text-center text-gray-500 mt-8">
+          Fonte: {' '}
+          <a
+            href="https://www.doctoralia.com.br/beatriz-favinchi-rossi/psicologo/votorantim"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            página oficial da profissional na Doctoralia
+          </a>
+          .
+        </p>
       </div>
     </section>
   )

@@ -5,15 +5,15 @@ export default function About() {
   const qualifications = [
     {
       title: 'Formação',
-      description: 'Graduada em Psicologia com especialização em Psicanálise',
+      description: 'Graduada em Psicologia com atuação em Psicanálise',
     },
     {
-      title: 'Especialização',
-      description: 'Gamificação aplicada à saúde mental através de jogos de tabuleiro',
+      title: 'Registro Profissional',
+      description: 'CRP SP 179388',
     },
     {
       title: 'Abordagem',
-      description: 'Terapia psicanalítica inovadora combinada com metodologias lúdicas',
+      description: 'Cuidado emocional com escuta acolhedora, transparência e progresso no ritmo do paciente',
     },
   ]
 
@@ -50,22 +50,20 @@ export default function About() {
               Beatriz Favinchi Rossi
             </h3>
             <p className="text-gray-700 leading-relaxed">
-              Psicóloga especializada em psicanálise, Beatriz Favinchi Rossi
-              desenvolveu uma abordagem única e inovadora que combina os
-              fundamentos da psicanálise tradicional com a gamificação através
-              de jogos de tabuleiro.
+              Beatriz Favinchi Rossi atua com psicanálise para adolescentes a
+              partir de 14 anos e adultos, oferecendo um ambiente seguro e
+              acolhedor para quem busca cuidado com a saúde emocional.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Com anos de experiência no atendimento clínico, Beatriz acredita
-              que o processo terapêutico pode ser mais acolhedor e envolvente
-              quando incorpora elementos lúdicos que facilitam a expressão e o
-              autoconhecimento.
+              Sua condução clínica prioriza vínculo, escuta ativa e
+              transparência de emoções. O processo terapêutico é estruturado de
+              forma gradual, respeitando a individualidade de cada paciente sem
+              impor mudanças forçadas.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Sua metodologia tem como objetivo tornar a terapia mais acessível
-              e menos intimidadora, especialmente para aqueles que buscam uma
-              forma diferente de trabalhar questões emocionais e de saúde
-              mental.
+              De acordo com cada caso, metodologias inovadoras podem ser
+              aplicadas para ampliar expressão, consciência emocional e
+              continuidade do tratamento com clareza e acolhimento.
             </p>
           </div>
 

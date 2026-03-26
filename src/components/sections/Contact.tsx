@@ -4,8 +4,10 @@ import Card from '../ui/Card'
 export default function Contact() {
   const contactInfo = {
     email: 'contato@beatrizrossi.com.br',
-    phone: '(00) 00000-0000',
-    address: 'Endereço do consultório',
+    phone: '+55 15 99112-6506',
+    crp: 'CRP SP 179388',
+    whatsapp:
+      'https://wa.me/5515991126506?text=Ol%C3%A1%2C%20quero%20agendar%20minha%201%C2%AA%20consulta%20gratuita.',
   }
 
   return (
@@ -20,8 +22,8 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded mb-4"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Estamos aqui para ajudar você. Entre em contato para agendar uma
-            consulta ou tirar suas dúvidas.
+            Fale direto no WhatsApp para agendar. Primeira consulta gratuita
+            mediante CPF e confirmação de horário.
           </p>
         </div>
 
@@ -87,9 +89,11 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Telefone</h4>
+                    <h4 className="font-semibold text-gray-900 mb-1">WhatsApp</h4>
                     <a
-                      href={`tel:${contactInfo.phone}`}
+                      href={contactInfo.whatsapp}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-600 hover:text-primary transition-colors"
                     >
                       {contactInfo.phone}
@@ -120,8 +124,8 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Endereço</h4>
-                    <p className="text-gray-600">{contactInfo.address}</p>
+                    <h4 className="font-semibold text-gray-900 mb-1">Registro profissional</h4>
+                    <p className="text-gray-600">{contactInfo.crp}</p>
                   </div>
                 </div>
               </div>
@@ -129,13 +133,13 @@ export default function Contact() {
 
             <Card className="bg-gradient-to-br from-primary/5 to-primary-light/5">
               <h4 className="font-bold text-gray-900 mb-2">
-                Horário de Atendimento
+                Condições da 1a consulta gratuita
               </h4>
               <p className="text-gray-600 mb-4">
-                Segunda a Sexta: 9h às 18h
+                Validação de CPF e confirmação de disponibilidade pelo WhatsApp.
               </p>
               <p className="text-gray-600">
-                Sábado: 9h às 13h
+                Atendimentos para adolescentes 14+ e adultos.
               </p>
             </Card>
           </div>

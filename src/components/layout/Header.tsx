@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import Button from '../ui/Button'
 
 export default function Header() {
+  const whatsappLink =
+    'https://wa.me/5515991126506?text=Ol%C3%A1%2C%20quero%20agendar%20minha%201%C2%AA%20consulta%20gratuita.'
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -27,6 +29,7 @@ export default function Header() {
     { id: 'sobre', label: 'Sobre' },
     { id: 'servicos', label: 'Serviços' },
     { id: 'gamificacao', label: 'Gamificação' },
+    { id: 'blog', label: 'Blog' },
     { id: 'depoimentos', label: 'Depoimentos' },
     { id: 'contato', label: 'Contato' },
   ]
@@ -61,13 +64,11 @@ export default function Header() {
                 {item.label}
               </button>
             ))}
-            <Button
-              onClick={() => scrollToSection('contato')}
-              variant="primary"
-              size="sm"
-            >
-              Agendar Consulta
-            </Button>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <Button variant="primary" size="sm">
+                WhatsApp Direto
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -108,14 +109,16 @@ export default function Header() {
                   {item.label}
                 </button>
               ))}
-              <Button
-                onClick={() => scrollToSection('contato')}
-                variant="primary"
-                size="sm"
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full"
               >
-                Agendar Consulta
-              </Button>
+                <Button variant="primary" size="sm" className="w-full">
+                  WhatsApp Direto
+                </Button>
+              </a>
             </div>
           </div>
         )}

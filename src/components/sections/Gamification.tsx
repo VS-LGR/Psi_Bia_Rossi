@@ -64,17 +64,17 @@ export default function Gamification() {
             <span>Metodologia Única</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Gamificação na{' '}
+            Gamificação como recurso{' '}
             <span className="text-primary relative">
-              Saúde Mental
+              complementar
               <span className="absolute -bottom-2 left-0 right-0 h-3 bg-primary-light/30 -z-10 transform -skew-x-12"></span>
             </span>
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded mb-4"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            A gamificação através de jogos de tabuleiro oferece uma abordagem
-            inovadora e acolhedora para o trabalho terapêutico, tornando o
-            processo de autoconhecimento mais envolvente e menos intimidador.
+            Em alguns atendimentos, os jogos de tabuleiro podem ser usados como
+            ferramenta clínica complementar para facilitar expressão emocional,
+            vínculo e compreensão de padrões comportamentais.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export default function Gamification() {
                     </h4>
                     <p className="text-gray-600">
                       Escolhemos jogos adequados aos objetivos terapêuticos e
-                      perfil do paciente.
+                      momento emocional de cada paciente.
                     </p>
                   </div>
                 </div>
@@ -114,8 +114,8 @@ export default function Gamification() {
                       <GameIcon type="dice" className="w-5 h-5 text-primary/60" />
                     </h4>
                     <p className="text-gray-600">
-                      Durante o jogo, observamos padrões comportamentais e
-                      emocionais que emergem naturalmente.
+                      Durante a dinâmica, observamos padrões emocionais que
+                      surgem de forma espontânea e segura.
                     </p>
                   </div>
                 </div>
@@ -131,8 +131,8 @@ export default function Gamification() {
                       <GameIcon type="board" className="w-5 h-5 text-primary/60" />
                     </h4>
                     <p className="text-gray-600">
-                      Após o jogo, trabalhamos as questões que surgiram,
-                      conectando-as com a vida real do paciente.
+                      Após a dinâmica, conectamos os pontos observados com
+                      situações reais do cotidiano.
                     </p>
                   </div>
                 </div>
@@ -146,8 +146,8 @@ export default function Gamification() {
                       <GameIcon type="piece" className="w-5 h-5 text-primary/60" />
                     </h4>
                     <p className="text-gray-600">
-                      Os insights obtidos são aplicados no dia a dia, promovendo
-                      mudanças reais e duradouras.
+                      Os insights são aplicados de maneira procedural e
+                      progressiva, respeitando o tempo de cada pessoa.
                     </p>
                   </div>
                 </div>

@@ -12,25 +12,25 @@ export default function Services() {
       id: '1',
       title: 'Psicanálise Individual',
       description:
-        'Atendimento personalizado focado no autoconhecimento e desenvolvimento pessoal através da psicanálise tradicional.',
+        'Atendimento personalizado com foco em autoconhecimento, manejo emocional e melhora progressiva no dia a dia.',
     },
     {
       id: '2',
       title: 'Terapia com Gamificação',
       description:
-        'Sessões terapêuticas utilizando jogos de tabuleiro como ferramenta de expressão e trabalho emocional.',
+        'Sessões com jogos de tabuleiro como recurso clínico complementar para expressão emocional e vínculo terapêutico.',
     },
     {
       id: '3',
-      title: 'Grupos Terapêuticos',
+      title: 'Atendimento Psicológico para Adolescentes 14+',
       description:
-        'Atendimento em grupo utilizando jogos de tabuleiro para promover interação social e trabalho coletivo.',
+        'Acompanhamento focado em ansiedade, autoestima, conflitos familiares e desafios emocionais da adolescência.',
     },
     {
       id: '4',
-      title: 'Orientação Profissional',
+      title: 'Atendimento Psicológico para Adultos',
       description:
-        'Acompanhamento para questões relacionadas a carreira e desenvolvimento profissional.',
+        'Espaço acolhedor para trabalhar ansiedade, angústia, sobrecarga emocional e conflitos relacionais no seu ritmo.',
     },
     {
       id: '5',
@@ -40,9 +40,9 @@ export default function Services() {
     },
     {
       id: '6',
-      title: 'Workshops e Palestras',
+      title: 'Teleatendimento',
       description:
-        'Eventos educativos sobre saúde mental, psicanálise e gamificação aplicada à terapia.',
+        'Atendimento remoto com a mesma condução clínica e segurança para quem prefere praticidade na rotina.',
     },
   ]
 
@@ -86,8 +86,8 @@ export default function Services() {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded mb-4"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Oferecemos diversos serviços para atender suas necessidades de
-            saúde mental e bem-estar emocional.
+            Serviços alinhados a psicanálise clínica e metodologias inovadoras,
+            com foco em adolescentes 14+ e adultos.
           </p>
         </div>
 

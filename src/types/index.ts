@@ -18,3 +18,12 @@ export interface Service {
   description: string
   icon?: string
 }
+
+export interface BlogPost {
+  id: string
+  title: string
+  slug: string
+  excerpt: string
+  published_at: string
+  status: 'draft' | 'published'
+}

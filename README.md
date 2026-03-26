@@ -131,3 +131,44 @@ npm run lint
 
 Este projeto é privado e destinado ao uso da profissional Beatriz Favinchi Rossi.
 
+## 🔧 Configuração do Blog (Supabase)
+
+A seção de Blog está preparada para ler posts publicados da tabela `blog_posts` no Supabase.
+Se as variáveis não estiverem configuradas, a página usa fallback local automaticamente.
+
+### 1) Variáveis de ambiente (Vercel e local)
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=https://SEU-PROJETO.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=SUA_ANON_KEY
+```
+
+### 2) SQL da tabela
+
+Execute no SQL Editor do Supabase:
+
+```sql
+create table if not exists public.blog_posts (
+  id uuid primary key default gen_random_uuid(),
+  title text not null,
+  slug text not null unique,
+  excerpt text not null,
+  published_at timestamptz not null default now(),
+  status text not null check (status in ('draft', 'published')) default 'draft'
+);
+
+create index if not exists blog_posts_status_published_at_idx
+  on public.blog_posts (status, published_at desc);
+```
+
+### 3) Publicação de conteúdo
+
+- `status = 'draft'`: não aparece no site
+- `status = 'published'`: aparece na seção Blog
+
+### 4) Checklist de deploy Vercel
+
+- Configurar variáveis `NEXT_PUBLIC_SUPABASE_URL` e `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- Confirmar build: `npm run build`
+- Publicar branch atual
+

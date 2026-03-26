@@ -3,7 +3,7 @@ export default function Footer() {
 
   const contactInfo = {
     email: 'contato@beatrizrossi.com.br',
-    phone: '(00) 00000-0000',
+    phone: '+55 15 99112-6506',
     socialMedia: {
       instagram: '#',
       linkedin: '#',
@@ -21,8 +21,8 @@ export default function Footer() {
               Beatriz Favinchi Rossi
             </h3>
             <p className="text-gray-400">
-              Psicóloga especializada em psicanálise com gamificação através de
-              jogos de tabuleiro para melhora da saúde mental.
+              Psicóloga com atuação em psicanálise para adolescentes 14+ e
+              adultos, com recursos inovadores aplicados conforme cada caso.
             </p>
           </div>
 
