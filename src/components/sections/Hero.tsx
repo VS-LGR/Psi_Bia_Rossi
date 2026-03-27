@@ -42,26 +42,25 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center pt-24 pb-14 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-secondary/40 relative overflow-hidden"
+      className="relative z-10 flex min-h-screen items-center justify-center bg-gradient-to-b from-white to-secondary/40 px-4 pb-14 pt-24 sm:px-6 lg:px-8 shadow-[0_22px_56px_-18px_rgba(15,53,80,0.16),0_10px_28px_-12px_rgba(26,95,150,0.09),inset_0_-1px_0_0_rgba(15,53,80,0.07)]"
     >
-      {/* Fundo/texture consistente */}
-      <div className="absolute inset-0 pattern-dots opacity-18"></div>
-      <div className="absolute inset-0 pattern-grid opacity-8"></div>
+      {/* Fundos recortados aqui para a sombra da section não ser cortada por overflow */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute inset-0 pattern-dots opacity-18"></div>
+        <div className="absolute inset-0 pattern-grid opacity-8"></div>
 
-      {/* Ilustração estilo anotações: só viewport web (lg+); omitida em mobile/tablet */}
-      <div
-        className="pointer-events-none absolute inset-0 hidden select-none lg:block"
-        aria-hidden="true"
-      >
-        <img
-          src={HERO_SKETCH.src1}
-          srcSet={`${HERO_SKETCH.src1} 1x, ${HERO_SKETCH.src2} 2x`}
-          sizes="100vw"
-          alt=""
-          decoding="async"
-          fetchPriority="low"
-          className="h-full w-full min-h-full object-cover object-center opacity-40"
-        />
+        {/* Ilustração estilo anotações: só viewport web (lg+); omitida em mobile/tablet */}
+        <div className="pointer-events-none absolute inset-0 hidden select-none lg:block">
+          <img
+            src={HERO_SKETCH.src1}
+            srcSet={`${HERO_SKETCH.src1} 1x, ${HERO_SKETCH.src2} 2x`}
+            sizes="100vw"
+            alt=""
+            decoding="async"
+            fetchPriority="low"
+            className="h-full w-full min-h-full object-cover object-center opacity-40"
+          />
+        </div>
       </div>
 
       {/* Elementos decorativos flutuantes (discretos) */}
