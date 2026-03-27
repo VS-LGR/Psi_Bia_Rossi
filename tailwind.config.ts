@@ -22,6 +22,10 @@ const config: Config = {
           // Terracota suave — contraste com branco em botões; quebra monocromia azul
           DEFAULT: '#9C4D38',
         },
+        rating: {
+          // Estrelas de depoimentos — amarelo-ouro chamativo sobre fundo claro
+          DEFAULT: '#EAB308',
+        },
       },
     },
   },

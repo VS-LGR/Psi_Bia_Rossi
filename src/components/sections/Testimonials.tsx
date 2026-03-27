@@ -87,7 +87,7 @@ export default function Testimonials() {
                             {[...Array(testimonial.rating)].map((_, i) => (
                               <svg
                                 key={i}
-                                className="w-5 h-5 text-accent"
+                                className="w-5 h-5 text-rating drop-shadow-[0_1px_2px_rgba(234,179,8,0.45)]"
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                               >
@@ -176,7 +176,7 @@ export default function Testimonials() {
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <svg
                       key={i}
-                      className="w-5 h-5 text-accent"
+                      className="w-5 h-5 text-rating drop-shadow-[0_1px_2px_rgba(234,179,8,0.45)]"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >

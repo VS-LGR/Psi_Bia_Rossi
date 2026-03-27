@@ -24,22 +24,42 @@
     @apply max-w-7xl mx-auto;
   }
 
-  /* Animações customizadas */
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
+  /* Decorações: trajetória suave em X/Y (efeito “flutuar” pela área da seção) */
+  @keyframes drift-soft {
+    0%,
+    100% {
+      transform: translate(0, 0);
     }
-    50% {
-      transform: translateY(-20px);
+    20% {
+      transform: translate(18px, -14px);
+    }
+    40% {
+      transform: translate(26px, 6px);
+    }
+    60% {
+      transform: translate(-12px, -20px);
+    }
+    80% {
+      transform: translate(-22px, 4px);
     }
   }
 
-  @keyframes rotate-slow {
-    from {
-      transform: rotate(0deg);
+  /* Rotação lenta + leve deriva (tabuleiros, ícones de fundo) */
+  @keyframes drift-rotate-soft {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
     }
-    to {
-      transform: rotate(360deg);
+    25% {
+      transform: translate(14px, -12px) rotate(90deg);
+    }
+    50% {
+      transform: translate(20px, 8px) rotate(180deg);
+    }
+    75% {
+      transform: translate(-16px, -10px) rotate(270deg);
+    }
+    100% {
+      transform: translate(0, 0) rotate(360deg);
     }
   }
 
@@ -115,11 +135,11 @@
   }
 
   .animate-float {
-    animation: float 6s ease-in-out infinite;
+    animation: drift-soft 16s ease-in-out infinite;
   }
 
   .animate-rotate-slow {
-    animation: rotate-slow 20s linear infinite;
+    animation: drift-rotate-soft 28s ease-in-out infinite;
   }
 
   .animate-pulse-glow {
