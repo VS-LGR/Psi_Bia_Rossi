@@ -31,8 +31,7 @@ function BreezeText({
 }
 
 const HERO_SKETCH = {
-  /** Arte “Planos / Futuro” — variantes 0.5x / 1x / 2x para densidade de tela */
-  src0_5: '/images/hero/hero-plano-futuro-0.5x.png',
+  /** Arte “Planos / Futuro” — apenas desktop (lg+); 1x / 2x conforme DPR */
   src1: '/images/hero/hero-plano-futuro-1x.png',
   src2: '/images/hero/hero-plano-futuro-2x.png',
 } as const
@@ -49,14 +48,14 @@ export default function Hero() {
       <div className="absolute inset-0 pattern-dots opacity-18"></div>
       <div className="absolute inset-0 pattern-grid opacity-8"></div>
 
-      {/* Ilustração estilo anotações (~40%); srcSet 0.5x / 1x / 2x conforme densidade */}
+      {/* Ilustração estilo anotações: só viewport web (lg+); omitida em mobile/tablet */}
       <div
-        className="pointer-events-none absolute inset-0 select-none"
+        className="pointer-events-none absolute inset-0 hidden select-none lg:block"
         aria-hidden="true"
       >
         <img
           src={HERO_SKETCH.src1}
-          srcSet={`${HERO_SKETCH.src0_5} 0.5x, ${HERO_SKETCH.src1} 1x, ${HERO_SKETCH.src2} 2x`}
+          srcSet={`${HERO_SKETCH.src1} 1x, ${HERO_SKETCH.src2} 2x`}
           sizes="100vw"
           alt=""
           decoding="async"
