@@ -46,11 +46,11 @@
   @keyframes pulse-glow {
     0%, 100% {
       opacity: 1;
-      box-shadow: 0 0 18px rgba(91, 157, 255, 0.22);
+      box-shadow: 0 0 18px rgba(26, 95, 150, 0.22);
     }
     50% {
       opacity: 0.8;
-      box-shadow: 0 0 28px rgba(91, 157, 255, 0.35);
+      box-shadow: 0 0 28px rgba(26, 95, 150, 0.35);
     }
   }
 
@@ -150,16 +150,16 @@
     will-change: transform, filter, opacity;
   }
 
-  /* Pattern de fundo */
+  /* Pattern de fundo — RGB alinhado a tailwind primary (#1A5F96) */
   .pattern-dots {
-    background-image: radial-gradient(circle, rgba(91, 157, 255, 0.14) 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(26, 95, 150, 0.14) 1px, transparent 1px);
     background-size: 30px 30px;
   }
 
   .pattern-grid {
     background-image: 
-      linear-gradient(rgba(91, 157, 255, 0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(91, 157, 255, 0.07) 1px, transparent 1px);
+      linear-gradient(rgba(26, 95, 150, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26, 95, 150, 0.07) 1px, transparent 1px);
     background-size: 50px 50px;
   }
 }

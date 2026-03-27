@@ -10,18 +10,17 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          // Azul bebê com mais contraste (CTA/links)
-          DEFAULT: '#2F7BFF',
-          light: '#BFD9FF',
+          // Eixo azul bebê profundificado — CTA/links (AA em texto sobre branco)
+          DEFAULT: '#1A5F96',
+          light: '#B9E3F5',
         },
         secondary: {
-          // Fundos acolhedores + profundidade
-          DEFAULT: '#EEF6FF',
-          dark: '#163B6B',
+          DEFAULT: '#EAF5FA',
+          dark: '#0F3550',
         },
         accent: {
-          // Acentos mais “bold” sem perder suavidade
-          DEFAULT: '#7AB6FF',
+          // Terracota suave — contraste com branco em botões; quebra monocromia azul
+          DEFAULT: '#9C4D38',
         },
       },
     },
