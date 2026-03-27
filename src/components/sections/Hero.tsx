@@ -30,6 +30,13 @@ function BreezeText({
   )
 }
 
+const HERO_SKETCH = {
+  /** Arte “Planos / Futuro” — variantes 0.5x / 1x / 2x para densidade de tela */
+  src0_5: '/images/hero/hero-plano-futuro-0.5x.png',
+  src1: '/images/hero/hero-plano-futuro-1x.png',
+  src2: '/images/hero/hero-plano-futuro-2x.png',
+} as const
+
 export default function Hero() {
   const whatsappLink = 'https://wa.me/5515991126506?text=Ol%C3%A1%2C%20quero%20agendar%20minha%201%C2%AA%20consulta%20gratuita.'
 
@@ -41,6 +48,22 @@ export default function Hero() {
       {/* Fundo/texture consistente */}
       <div className="absolute inset-0 pattern-dots opacity-18"></div>
       <div className="absolute inset-0 pattern-grid opacity-8"></div>
+
+      {/* Ilustração estilo anotações (~40%); srcSet 0.5x / 1x / 2x conforme densidade */}
+      <div
+        className="pointer-events-none absolute inset-0 select-none"
+        aria-hidden="true"
+      >
+        <img
+          src={HERO_SKETCH.src1}
+          srcSet={`${HERO_SKETCH.src0_5} 0.5x, ${HERO_SKETCH.src1} 1x, ${HERO_SKETCH.src2} 2x`}
+          sizes="100vw"
+          alt=""
+          decoding="async"
+          fetchPriority="low"
+          className="h-full w-full min-h-full object-cover object-center opacity-40"
+        />
+      </div>
 
       {/* Elementos decorativos flutuantes (discretos) */}
       <div className="absolute top-24 left-8 w-14 h-14 text-primary/15 animate-float hidden lg:block">
